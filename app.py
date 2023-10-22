@@ -36,7 +36,7 @@ st.write(df)
 
 
 # load the model from disk
-loaded_model = load(open('Logistic_Model.sav', 'rb'))
+loaded_model = pickle.load(open('Logistic_Model.sav', 'rb'))
 
 prediction = loaded_model.predict(df)
 prediction_proba = loaded_model.predict_proba(df)
